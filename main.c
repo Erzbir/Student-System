@@ -42,7 +42,7 @@
 #include "menu.h"       // 菜单
 #include "register.h"   // 注册
 #include "login.h"      // 登录
-#include "getAdmin.h"      // 获取管理权限
+#include "getAdmin.h"   // 获取管理权限
 #include "checkAdmin.h" // 检查是否有权限
 #include "file_init.h"  // 程序初始化
 
