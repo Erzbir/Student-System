@@ -6,6 +6,10 @@
 
 // This is debug version, use DoubleLinkList but not circular.
 
+// Running in Debug!!!
+// Running in Debug!!!
+// Running in Debug!!!
+
 // Why I use English? Because use Chinese may cause garbled characters in different encodings.
 
 //Write Environment:
