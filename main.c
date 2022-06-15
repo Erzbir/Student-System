@@ -146,7 +146,7 @@ int main() {
                         }
                         break;
                     case 8:
-                        printf("\n%d\n", size_2);
+                        printf("\n学生总数:%d\n", size_2);
                         break;
                     default:
                         printf("\n请重输\n");
