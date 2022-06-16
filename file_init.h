@@ -10,7 +10,7 @@
 
 int FileInit() {
     FILE *file = NULL;
-    StuNode *L = NULL;
+    StuNode *L = NULL; // just to record size
     L = (StuNode *) malloc(sizeof(StuNode));
     if (!(file = fopen(USER_FILE, "ab"))) {
         return 0;
@@ -28,6 +28,7 @@ int FileInit() {
         size_2++;
     }
     fclose(file);
+    free(L);
     if (!(Stu_data_r())) {
         return 0;
     }

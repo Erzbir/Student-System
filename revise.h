@@ -12,36 +12,36 @@ int Revise() {
     char select = 0;
     StuNode *L = NULL;
     while (1) {
-        printf("输入学号:");
+        printf("Enter ID:");
         scanf("%ld", &num);
         if (!(L = Scan(num))) {
             return 0;
         }
-        printf("1.姓名\n2.成绩\n");
-        printf("输入要修改的数据的序号:");
+        printf("1.Name\n2.Score\n");
+        printf("Enter your choice:");
         scanf("%s", &select);
         if (select == '1') {
-            printf("修改姓名:");
+            printf("Revise name:");
             scanf("%s", L->data.name);
-            printf("\n修改成功\n");
+            printf("\nRevised Successfully\n");
             system(PAUSE);
         } else if (select == '2') {
-            printf("修改第一科成绩:");
+            printf("Revise No.1 score:");
             scanf("%f", &L->data.score[0]);
-            printf("修改第二科成绩:");
+            printf("Revise No.2 score:");
             scanf("%f", &L->data.score[1]);
-            printf("修改第三科成绩:");
+            printf("Revise No.3 score:");
             scanf("%f", &L->data.score[2]);
             L->data.sum = L->data.score[0] + L->data.score[1] + L->data.score[2];
             L->data.aver = L->data.sum / 3;
-            printf("\n修改成功\n");
+            printf("\nRevised Successfully\n");
             system(PAUSE);
         } else {
-            printf("\n重新输入\n");
+            printf("\nPlease re-enter\n");
             system(PAUSE);
             break;
         }
-        printf("是否继续(y/n):");
+        printf("Whether to continue?(y/n):");
         scanf("%s", &select);
         if (select == 'N' || select == 'n') {
             if (!Stu_data_w()) {

@@ -13,46 +13,46 @@ StuNode *Scan(long int item) {
     while (L) {
         if (L->data.num == item) {
             while (1) {
-                printf("已查询到该学生,是否打印其信息(y/n):");
+                printf("Already found student, do you want to display?(y/n):");
                 scanf("%s", &select);
                 if (select == 'y' || select == 'Y') {
-                    printf("学号:%ld, 姓名:%s   第一科成绩:%.2f, 第二科成绩:%.2f, "
-                           "第三科成绩:%.2f  总分:%.2f 平均分:%.2f\n",
+                    printf("ID:%ld, name:%s, score_1:%.2f, score_2:%.2f, "
+                           "score_3:%.2f, total_score:%.2f, average_score:%.2f\n",
                            L->data.num, L->data.name, L->data.score[0],
                            L->data.score[1], L->data.score[2], L->data.sum, L->data.aver);
-                    printf("\n查询成功\n");
+                    printf("\nSearched Successfully\n");
                     system(PAUSE);
                     return L;
                 } else if (select == 'N' || select == 'n') {
                     return L;
                 } else {
-                    printf("\n重新输入\n");
+                    printf("\nPlease re-enter\n");
                 }
             }
         }
         if (P->data.num == item) {
             while (1) {
-                printf("已查询到该学生,是否打印其信息(y/n):");
+                printf("Already found student, do you want to display?(y/n):");
                 scanf("%s", &select);
                 if (select == 'y' || select == 'Y') {
-                    printf("学号:%ld, 姓名:%s   第一科成绩:%.2f, 第二科成绩:%.2f, "
-                           "第三科成绩:%.2f  总分:%.2f 平均分:%.2f\n",
+                    printf("ID:%ld, name:%s, score_1:%.2f, score_2:%.2f, "
+                           "score_3:%.2f, total_score:%.2f, average_score:%.2f\n",
                            P->data.num, P->data.name, P->data.score[0],
                            P->data.score[1], P->data.score[2], L->data.sum, P->data.aver);
-                    printf("\n查询成功\n");
+                    printf("\nSearched Successfully\n");
                     system(PAUSE);
                     return P;
                 } else if (select == 'N' || select == 'n') {
                     return P;
                 } else {
-                    printf("\n重新输入\n");
+                    printf("\nPlease re-enter\n");
                 }
             }
         }
         L = L->next;
         P = P->pre;
     }
-    printf("\n未查询到该学生\n");
+    printf("\nStudent Did Not Found\n");
     system(PAUSE);
     return 0;
 }

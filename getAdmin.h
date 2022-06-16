@@ -13,17 +13,17 @@ int Admin(int index) {
     char passwd[16];
     char passwd_admin[16];
     strcpy(passwd_admin, "123456");
-    printf("输入管理员密码:");
+    printf("Enter admin password:");
     scanf("%s", passwd);
     if (strcmp(passwd, passwd_admin) == 0) {
         User[index].type = 0;
         if (User_data_w(User) == -1) {
             return 0;
         }
-        printf("\n权限获取成功\n");
+        printf("\nPermission Obtained Successfully\n");
         system(PAUSE);
     } else {
-        printf("\n密码错误\n");
+        printf("\nWrong password\n");
         system(PAUSE);
         return 0;
     }

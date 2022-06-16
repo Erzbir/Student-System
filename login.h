@@ -12,13 +12,13 @@
 int Login() {
     int n;
     char account[16], password[16];
-    printf("输入帐号:");
+    printf("Enter username:");
     scanf("%s", account);
-    printf("输入密码:");
+    printf("Enter password:");
     scanf("%s", password);
     for (n = 0; n < USER_SIZE; n++) {
         if (strcmp(User[n].account, account) == 0 && strcmp(User[n].password, password) == 0) {
-            printf("\n登录成功\n");
+            printf("\nLogin Successfully\n");
             system(PAUSE);
             return n;
         }

@@ -2,49 +2,52 @@
 // Created by Erzbir on 2022/6/14.
 //
 
-//编写环境:
+// student-system
+
+// This is debug version, use DoubleLinkList but not circular.
+
+//write environment:
 /*
- * 系统: MacOS
- * 硬件环境: MacbookPro(M1芯片)
- * 软件环境: Clion2022
- * 编码: UTF-8
+ * System Environment: macOS
+ * Hardware Environment: MacbookPro (M1 chip)
+ * Software Environment: Clion2022
+ * Encoding: UTF-8
  */
 
 /*
- * 此版实现方式为数组和双向链表, 用户数据较少所以直接用数组存,
- * 而学生数据则使用的是双向链表, 没有检查学号唯一性且用最简单的冒泡排序(没有时间了),
- * 此双向链表并不是循环链表, 最后一个节点的next指向了空并没有指向第一个节点, 除此之外和双向循环链表一样,
+ * This version is implemented as an array and a DoubleLinkList.
+ * There is less user data, so it is directly stored in an array.
+ * The student data uses a DoubleLinkList, does not check the uniqueness of the student number and uses the simplest bubble sort (no time),
+ * The DoubleLinkList is not circular, the next of the last node points to the NULL and does not point to the first node, except that it is the same as the DoubleCircularLinkList,
  */
 
-//运行前请先修改"define.h"中声明的文件路径, 文件名可以自定义且可以位于不同文件夹, 但必须是不相同的文件.
-//Windows系统运行前请将"define.h"中声明的PAUSE改成Windows下的命令
+//Please modify the file path declared in "define.h" before running. The file name can be customized and can be located in different folders, but must be different files.
+//Please change the PAUSE declared in "define.h" to the command under Windows before running the Windows system
+
+//Need to add all files to the working directory, preferably CLion
+
+//You cannot operate "modify" and "delete" without permission. If you want to operate, you must obtain permission first.
+// The management password is: 123456
 
 
-/*
- * 代码中或者Windows命令行下运行时如果出现乱码问题请修改本项目所有的文件编码, Windows命令行默认的编码为GBK, 一般修改为GBK即可
- * 如果MacOS或Linux上出现乱码, 尝试不同编码, 这种情况一般不会出现
-*/
-
-//需要将所有文件添加到工作目录, 最好用CLion
-
-//没有权限不能操作"修改"和"删除", 要想操作先获取权限, 管理密码为:123456
 
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "output.h"     // 输出数据
-#include "input.h"      // 输入数据
-#include "struct.h"     // 数据存储结构
-#include "define.h"     // 各种全局变量定义和常量声明
-#include "delete.h"     // 删除学生数据
-#include "sort.h"       // 排序
-#include "revise.h"     // 修改
-#include "menu.h"       // 菜单
-#include "register.h"   // 注册
-#include "login.h"      // 登录
-#include "getAdmin.h"   // 获取管理权限
-#include "checkAdmin.h" // 检查是否有权限
-#include "file_init.h"  // 程序初始化
+#include "output.h"     // display student data
+#include "input.h"      // input student data
+#include "struct.h"     // data struct of all
+#include "define.h"     // all global variable and defined constant
+#include "delete.h"     // delete student data
+#include "sort.h"       // nums.sort, sumScore.sort, averScore.sort
+#include "revise.h"     // modify student info
+#include "menu.h"       // two menus
+#include "register.h"   // sign up
+#include "login.h"      // sign in
+#include "getAdmin.h"   // obtain admin permission
+#include "checkAdmin.h" // check whether user is an admin
+#include "file_init.h"  // program.init
+#include "find.h"       // search student data
 
 int main() {
     head = (StuNode *) malloc(sizeof(StuNode));
@@ -52,7 +55,7 @@ int main() {
     long int num = 0;
     int value = 0;
     if (!(FileInit())) {
-        printf("\n初始化错误\n");
+        printf("\nFailed to Initialize\n");
         system(PAUSE);
         exit(0);
     }
@@ -61,24 +64,24 @@ int main() {
         scanf("%d", &select);
         switch (select) {
             case 0:
-                printf("已退出");
+                printf("exited");
                 system(PAUSE);
                 break;
             case 1:
                 if (!(Register())) {
-                    printf("注册错误");
+                    printf("Failed to Register");
                     system(PAUSE);
                 }
                 break;
             case 2:
                 value = Login();
                 if (!value) {
-                    printf("\n登录错误\n");
+                    printf("\nFailed to Login\n");
                     system(PAUSE);
                 }
                 break;
             default:
-                printf("\n请重输\n");
+                printf("\nPlease re-enter\n");
                 system(PAUSE);
                 break;
         }
@@ -88,68 +91,69 @@ int main() {
                 scanf("%d", &select_2);
                 switch (select_2) {
                     case 0:
-                        printf("\n已退出\n");
+                        printf("\nexited\n");
                         system(PAUSE);
                         break;
                     case 1:
                         if (!(Admin(value))) {
-                            printf("获取错误");
+                            printf("Failed to obtain");
                             system(PAUSE);
                         }
                         break;
                     case 2:
                         if (!(Input())) {
-                            printf("\n录入错误\n");
+                            printf("\nFailed to input\n");
                             system(PAUSE);
                         }
                         break;
                     case 3:
                         if (!(Sort())) {
-                            printf("\n排序错误\n");
+                            printf("\nFailed to Sort\n");
                             system(PAUSE);
                         }
                         break;
                     case 4:
                         if (!(Print())) {
-                            printf("\n显示错误\n");
+                            printf("\nFailed to Output\n");
                             system(PAUSE);
                         }
                         break;
                     case 5:
-                        printf("输入学号:");
+                        printf("Enter student ID:");
                         scanf("%ld", &num);
                         if (!(Scan(num))) {
-                            printf("\n查找错误\n");
+                            printf("\nFailed to Search\n");
                             system(PAUSE);
                         }
                         break;
                     case 6:
                         if (!(Check(value))) {
-                            printf("\n没有权限\n");
+                            printf("\nNo Permission\n");
                             system(PAUSE);
                             break;
                         }
                         if (!(Revise())) {
-                            printf("\n修改错误\n");
+                            printf("\nFailed to Revise\n");
                             system(PAUSE);
                         }
                         break;
                     case 7:
                         if (!(Check(value))) {
-                            printf("\n没有权限\n");
+                            printf("\nNo Permission\n");
                             system(PAUSE);
                             break;
                         }
                         if (!Delete()) {
-                            printf("\n删除错误\n");
+                            printf("\nFailed to Delete\n");
                             system(PAUSE);
                         }
                         break;
                     case 8:
-                        printf("\n学生总数:%d\n", size_2);
+                        printf("\nThe total number of student:%d\n", size_2);
+                        system(PAUSE);
                         break;
                     default:
-                        printf("\n请重输\n");
+                        printf("\nPlease re-enter\n");
                         system(PAUSE);
                         break;
                 }

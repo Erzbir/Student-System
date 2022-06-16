@@ -21,7 +21,7 @@ int Sort() {
         n++;
         size_3++;
     }
-    printf("1.按总分排序\n2.按平均分排序\n3.按学号排序\n选择模式(序号即可):");
+    printf("1.sumScore.sort\n2.averScore.sort\n3.ID.sort\nEnter your choice:");
     scanf("%d", &select);
     if (select == 1) {
         for (n = 0; n < size_3 - 1; n++) {
@@ -54,7 +54,7 @@ int Sort() {
             }
         }
     } else {
-        printf("\n选择错误\n");
+        printf("\nPlease re-enter\n");
         system(PAUSE);
     }
     for (n = 0; P->next; n++) {
@@ -64,7 +64,7 @@ int Sort() {
     if (!(Stu_data_w())) {
         return 0;
     }
-    printf("\n排序完成\n");
+    printf("\nSorted Successfully\n");
     system(PAUSE);
     return 1;
 }

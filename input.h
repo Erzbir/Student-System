@@ -17,7 +17,7 @@ int Input() {
         if (!s) {
             return 0;
         }
-        printf("输入第%d个学生信息(学号,姓名)(-1结束):", n + 1);
+        printf("Enter No.%d student info(ID,Name)(-1 to exited):", n + 1);
         scanf("%ld, %s", &num, s->data.name);
         if (num < 0) {
             free(s);
@@ -26,7 +26,7 @@ int Input() {
         }
         s->data.num = num;
         for (i = 0; i < 3; i++) {
-            printf("输入第%d科成绩:", i + 1);
+            printf("Enter No.%d score:", i + 1);
             scanf("%f", &s->data.score[i]);
         }
         s->data.sum = s->data.score[0] + s->data.score[1] + s->data.score[2];
@@ -45,7 +45,7 @@ int Input() {
     if (!(Stu_data_r())) {
         return 0;
     }
-    printf("\n录入成功\n");
+    printf("\nInput Successfully\n");
     system(PAUSE);
     return 1;
 }

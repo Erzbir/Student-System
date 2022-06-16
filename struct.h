@@ -17,7 +17,7 @@ typedef struct Student {
 typedef struct Users {
     char account[16];
     char password[16];
-    int type;   //权限标记,0为管理员,1为普通用户
+    int type;   //permission type, 0 is admin, 1 is user
 } Users;
 
 typedef struct StuNode {

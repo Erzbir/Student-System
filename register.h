@@ -13,18 +13,18 @@
 int Register() {
     int n;
     char account[16], password[16], password_sure[16];
-    printf("输入用户名:");
+    printf("Enter username:");
     scanf("%s", account);
     for (n = 0; n < USER_SIZE - 1; n++) {
         if (strcmp(User[n].account, account) == 0) {
-            printf("\n用户已存在\n");
+            printf("\nUser has existed\n");
             system(PAUSE);
             return 0;
         }
     }
-    printf("输入密码:");
+    printf("Enter password:");
     scanf("%s", password);
-    printf("确认密码:");
+    printf("Sure password:");
     scanf("%s", password_sure);
     if (strcmp(password_sure, password) == 0) {
         strcpy(User[size].account, account);
@@ -35,11 +35,11 @@ int Register() {
             return -1;
         }
     } else {
-        printf("\n两次密码不同\n");
+        printf("\nTwo passwords are not same\n");
         system(PAUSE);
         return 0;
     }
-    printf("\n注册成功\n");
+    printf("\nRegistered Successfully\n");
     system(PAUSE);
     return 1;
 }

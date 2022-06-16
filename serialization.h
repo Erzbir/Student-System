@@ -12,7 +12,7 @@ int Stu_data_r() {
     StuNode *L = head, *s = NULL;
     FILE *file = NULL;
     if (!(file = fopen(STU_FILE, "rb"))) {
-        printf("\n学生信息读取失败\n");
+        printf("\nFailed to Open student.IOStream\n");
         system(PAUSE);
         return 0;
     }
@@ -36,7 +36,7 @@ int User_data_r() {
     int n = 0;
     FILE *file = NULL;
     if (!(file = fopen(USER_FILE, "rb"))) {
-        printf("\n用户信息读取失败\n");
+        printf("\nFailed to Open user.IOStream\n");
         system(PAUSE);
         return 0;
     }
@@ -54,7 +54,7 @@ int Stu_data_a() {
     StuNode *L = head->next;
     FILE *file = NULL;
     if (!(file = fopen(STU_FILE, "ab"))) {
-        printf("\n学生信息读取失败\n");
+        printf("\nFailed to Open student.IOStream\n");
         system(PAUSE);
         return 0;
     }
@@ -70,7 +70,7 @@ int Stu_data_w() {
     StuNode *L = head->next;
     FILE *file = NULL;
     if (!(file = fopen(STU_FILE, "wb"))) {
-        printf("\n学生信息读取失败\n");
+        printf("\nFailed to Open student.IOStream\n");
         system(PAUSE);
         return 0;
     }
@@ -87,7 +87,7 @@ int User_data_w() {
     int n;
     FILE *file = NULL;
     if ((file = fopen(USER_FILE, "wb")) == NULL) {
-        printf("\n用户信息读取失败\n");
+        printf("\nFailed to Open student.IOStream\n");
         system(PAUSE);
         return 0;
     }

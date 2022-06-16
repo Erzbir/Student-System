@@ -12,7 +12,7 @@
 int Print() {
     StuNode *L = head->next;
     int n, num_1 = size_2, num_2 = 1, i;
-    printf("输入显示的学生数量:");
+    printf("Enter the number to display:");
     scanf("%d", &num_2);
     i = (num_2 >= num_1) ? num_1 - 1 : num_2;
     if (i > 0) {
@@ -24,7 +24,7 @@ int Print() {
                    L->data.score[1], L->data.score[2], L->data.sum, L->data.aver);
             L = L->next;
         }
-        printf("\n显示成功\n");
+        printf("\nDisplay Successfully\n");
         system(PAUSE);
     }
     return 1;

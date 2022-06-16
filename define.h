@@ -9,15 +9,15 @@
 #include <stdlib.h>
 #include "struct.h"
 
-#define USER_FILE "./user.txt"  // 用户信息路径
-#define STU_FILE "./stu.txt"    // 学生信息路径
-#define USER_SIZE 20    // 最大用户数量
-#define STU_SIZE 10000  // 最大学生数据连续输入量
-#define PAUSE "read"    // MacOS系统任意键继续
-//#define PAUSE "pause"   // Windows系统任意键继续
-StuNode *head = NULL;          // 头节点
-Users User[USER_SIZE];  // 存储用户信息
-int size = 0;           // 当前用户数量
-int size_2 = 0;         // 当前学生数量
+#define USER_FILE "./user.txt"  // user data path
+#define STU_FILE "./stu.txt"    // student data path
+#define USER_SIZE 20    // user data limit
+#define STU_SIZE 10000  // student data limit when input
+#define PAUSE "read"    // pause of macOS
+//#define PAUSE "pause"   // pause of Windows
+StuNode *head = NULL;          // head node
+Users User[USER_SIZE];  // user data
+int size = 0;           // the size of user data
+int size_2 = 0;         // the size of student data
 
 #endif //SYS_2_DEFINE_H

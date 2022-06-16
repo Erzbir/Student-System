@@ -13,12 +13,12 @@ int Delete() {
     char select = 0;
     StuNode *L = NULL;
     while (1) {
-        printf("需要删除的学生学号:");
+        printf("The ID you want to delete:");
         scanf("%ld", &num);
         if (!(L = Scan(num))) {
             return 0;
         }
-        printf("是否确定删除(y/n):");
+        printf("Sure to delete?(y/n):");
         scanf("%s", &select);
         if (select == 'n' || select == 'N') {
             return 0;
@@ -27,14 +27,14 @@ int Delete() {
             L->pre = NULL;
             free(L);
             size_2--;
-            printf("\n删除成功\n");
+            printf("\nDeleted Successfully\n");
             system(PAUSE);
         } else {
-            printf("\n重新输入\n");
+            printf("\nPlease re-enter\n");
             system(PAUSE);
             break;
         }
-        printf("是否继续(y/n):");
+        printf("Whether to continue?(y/n):");
         scanf("%s", &select);
         if (select == 'N' || select == 'n') {
             if (!(Stu_data_w())) {
