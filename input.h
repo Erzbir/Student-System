@@ -20,6 +20,8 @@ int Input() {
         printf("输入第%d个学生信息(学号,姓名)(-1结束):", n + 1);
         scanf("%ld, %s", &num, s->data.name);
         if (num < 0) {
+            free(s);
+            s = NULL;
             break;
         }
         s->data.num = num;
