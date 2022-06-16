@@ -27,7 +27,6 @@ StuNode *Scan(long int item) {
                     return L;
                 } else {
                     printf("\n重新输入\n");
-                    system(PAUSE);
                 }
             }
         }
@@ -41,6 +40,7 @@ StuNode *Scan(long int item) {
                            P->data.num, P->data.name, P->data.score[0],
                            P->data.score[1], P->data.score[2], L->data.sum, P->data.aver);
                     printf("\n查询成功\n");
+                    system(PAUSE);
                     return P;
                 } else if (select == 'N' || select == 'n') {
                     return P;
@@ -53,6 +53,7 @@ StuNode *Scan(long int item) {
         P = P->pre;
     }
     printf("\n未查询到该学生\n");
+    system(PAUSE);
     return 0;
 }
 
