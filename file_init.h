@@ -8,22 +8,22 @@
 #include "define.h"
 #include "serialization.h"
 
-int FileInit(){
+int FileInit() {
     FILE *file = NULL;
     StuNode *L = NULL;
-    L = (StuNode*) malloc(sizeof(StuNode));
-    if(!(file = fopen(USER_FILE, "ab"))){
+    L = (StuNode *) malloc(sizeof(StuNode));
+    if (!(file = fopen(USER_FILE, "ab"))) {
         return 0;
     }
     fclose(file);
-    if(!(file = fopen(STU_FILE, "ab"))) {
+    if (!(file = fopen(STU_FILE, "ab"))) {
         return 0;
     }
     fclose(file);
-    if(!(file = fopen(STU_FILE, "rb"))){
+    if (!(file = fopen(STU_FILE, "rb"))) {
         return 0;
     }
-    while(!feof(file)){
+    while (!feof(file)) {
         fread(&L->data, sizeof(Student), 1, file);
         size_2++;
     }

@@ -44,7 +44,7 @@ int Revise() {
         printf("是否继续(y/n):");
         scanf("%s", &select);
         if (select == 'N' || select == 'n') {
-            if(!Stu_data_w()){
+            if (!Stu_data_w()) {
                 return 0;
             }
             return 1;

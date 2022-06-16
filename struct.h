@@ -20,10 +20,10 @@ typedef struct Users {
     int type;   //权限标记,0为管理员,1为普通用户
 } Users;
 
-typedef struct StuNode{
+typedef struct StuNode {
     Student data;
     struct StuNode *next;
     struct StuNode *pre;
-}StuNode;
+} StuNode;
 
 #endif //SYS_2_STRUCT_H

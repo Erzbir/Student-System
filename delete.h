@@ -4,6 +4,7 @@
 
 #ifndef SYS_2_DELETE_H
 #define SYS_2_DELETE_H
+
 #include <stdlib.h>
 #include "find.h"
 
@@ -14,15 +15,14 @@ int Delete() {
     while (1) {
         printf("需要删除的学生学号:");
         scanf("%ld", &num);
-        if(!(L = Scan(num))){
+        if (!(L = Scan(num))) {
             return 0;
         }
         printf("是否确定删除(y/n):");
         scanf("%s", &select);
         if (select == 'n' || select == 'N') {
             return 0;
-        }
-        else if (select == 'y' || select == 'Y') {
+        } else if (select == 'y' || select == 'Y') {
             L->pre->next = L->next;
             L->pre = NULL;
             free(L);

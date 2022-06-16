@@ -16,8 +16,8 @@ int Stu_data_r() {
         system(PAUSE);
         return 0;
     }
-    while(!feof(file)) {
-        if(!(s = (StuNode*) malloc(sizeof(StuNode)))){
+    while (!feof(file)) {
+        if (!(s = (StuNode *) malloc(sizeof(StuNode)))) {
             return 0;
         }
         fread(&s->data, sizeof(Student), 1, file);
@@ -40,7 +40,7 @@ int User_data_r() {
         system(PAUSE);
         return 0;
     }
-    while(!feof(file)) {
+    while (!feof(file)) {
         fread(&User[n], sizeof(Users), 1, file);
         size++;
         n++;
@@ -58,7 +58,7 @@ int Stu_data_a() {
         system(PAUSE);
         return 0;
     }
-    while(L) {
+    while (L) {
         fwrite(&L->data, sizeof(Student), 1, file);
         L = L->next;
     }
@@ -74,7 +74,7 @@ int Stu_data_w() {
         system(PAUSE);
         return 0;
     }
-    while(L->next) {
+    while (L->next) {
         fwrite(&L->data, sizeof(Student), 1, file);
         L = L->next;
     }

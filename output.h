@@ -4,6 +4,7 @@
 
 #ifndef SYS_2_OUTPUT_H
 #define SYS_2_OUTPUT_H
+
 #include "struct.h"
 #include "define.h"
 #include "serialization.h"
