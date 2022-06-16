@@ -4,7 +4,7 @@ This is debug version, use DoubleLinkList but not circular.
 
 // Write Environment:
 /*
- * System Enviroment: MacOS
+ * System Environment: MacOS
  * Hardware Environment: MacbookPro (M1 chip)
  * Software Environment: Clion2022
  * Encoding: UTF-8
