@@ -23,11 +23,11 @@ int Stu_data_r() {
         fread(&s->data, sizeof(Student), 1, file);
         L->next = s;
         s->pre = L;
-        L = L->next;
+        s->next = NULL;
+        L = s;
     }
     fclose(file);
-    head->pre = L;
-    L->next = NULL;
+    head->pre = L->pre;
     return 1;
 }
 

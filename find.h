@@ -10,13 +10,13 @@
 StuNode *Scan(long int item) {
     char select = 0;
     StuNode *L = head->next, *P = head->pre;
-    while (L) {
+    while (L->next) {
         if (L->data.num == item) {
             while (1) {
                 printf("Already found student, do you want to display?(y/n):");
                 scanf("%s", &select);
                 if (select == 'y' || select == 'Y') {
-                    printf("ID:%ld, name:%s, score_1:%.2f, score_2:%.2f, "
+                    printf("\nID:%ld, name:%s, score_1:%.2f, score_2:%.2f, "
                            "score_3:%.2f, total_score:%.2f, average_score:%.2f\n",
                            L->data.num, L->data.name, L->data.score[0],
                            L->data.score[1], L->data.score[2], L->data.sum, L->data.aver);
@@ -35,7 +35,7 @@ StuNode *Scan(long int item) {
                 printf("Already found student, do you want to display?(y/n):");
                 scanf("%s", &select);
                 if (select == 'y' || select == 'Y') {
-                    printf("ID:%ld, name:%s, score_1:%.2f, score_2:%.2f, "
+                    printf("\nID:%ld, name:%s, score_1:%.2f, score_2:%.2f, "
                            "score_3:%.2f, total_score:%.2f, average_score:%.2f\n",
                            P->data.num, P->data.name, P->data.score[0],
                            P->data.score[1], P->data.score[2], L->data.sum, P->data.aver);

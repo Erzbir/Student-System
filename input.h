@@ -34,11 +34,11 @@ int Input() {
         L->next = s;
         s->pre = L;
         s->next = NULL;
-        L = L->next;
+        L = s;
         size_2++;
     }
-    head->pre = L;
     L->next = NULL;
+    head->pre = L;
     if (!(Stu_data_a())) {
         return 0;
     }

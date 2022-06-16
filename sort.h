@@ -57,7 +57,7 @@ int Sort() {
         printf("\nPlease re-enter\n");
         system(PAUSE);
     }
-    for (n = 0; P->next; n++) {
+    for (n = 0; P; n++) {
         P->data = Stu[n];
         P = P->next;
     }
