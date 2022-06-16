@@ -6,7 +6,7 @@
 
 // This is debug version, use DoubleLinkList but not circular.
 
-//write environment:
+//Write Environment:
 /*
  * System Environment: macOS
  * Hardware Environment: MacbookPro (M1 chip)
