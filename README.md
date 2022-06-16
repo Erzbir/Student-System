@@ -3,11 +3,13 @@
 This is debug version, use DoubleLinkList but not circular. 
 
 // Write Environment:
+
 /*
  * System Environment: MacOS
  * Hardware Environment: MacbookPro (M1 chip)
  * Software Environment: Clion2022
  * Encoding: UTF-8
+
  */
 
 /*
@@ -15,6 +17,7 @@ This is debug version, use DoubleLinkList but not circular.
  * The student data uses a DoubleLinkList, does not check the uniqueness of the student number and uses the simplest bubble sort (no time),
  * The DoubleLinkList is not circular, the next of the last node points to the NULL and does not point to the first node, 
  * except that it is the same as the DoubleCircularLinkList.
+
  */
 
 // Please modify the file path declared in "define.h" before running. The file name can be customized and can be located in different folders, but must be different files.
