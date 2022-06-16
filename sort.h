@@ -9,13 +9,13 @@
 
 int Sort() {
     int n = 0, m, size_3 = 0;
-    int select;
+    int select = 0;
     Student Stu[1000], tmp;
     StuNode *L = head->next, *P = head->next;
     if (L == NULL) {
         return -1;
     }
-    while (L) {
+    while (L->next) {
         Stu[n] = L->data;
         L = L->next;
         n++;
@@ -57,7 +57,7 @@ int Sort() {
         printf("\n选择错误\n");
         system(PAUSE);
     }
-    for (n = 0; P; n++) {
+    for (n = 0; P->next; n++) {
         P->data = Stu[n];
         P = P->next;
     }

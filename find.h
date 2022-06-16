@@ -8,7 +8,7 @@
 #include "define.h"
 
 StuNode *Scan(long int item) {
-    char select;
+    char select = 0;
     StuNode *L = head->next, *P = head->pre;
     while (L) {
         if (L->data.num == item) {

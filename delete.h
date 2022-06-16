@@ -8,9 +8,9 @@
 #include "find.h"
 
 int Delete() {
-    long int num;
-    char select;
-    StuNode *L;
+    long int num = 0;
+    char select = 0;
+    StuNode *L = NULL;
     while (1) {
         printf("需要删除的学生学号:");
         scanf("%ld", &num);

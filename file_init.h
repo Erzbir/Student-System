@@ -10,7 +10,7 @@
 
 int FileInit(){
     FILE *file = NULL;
-    StuNode *L;
+    StuNode *L = NULL;
     L = (StuNode*) malloc(sizeof(StuNode));
     if(!(file = fopen(USER_FILE, "ab"))){
         return 0;

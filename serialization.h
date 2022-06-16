@@ -9,8 +9,8 @@
 
 //读取学生数据
 int Stu_data_r() {
-    StuNode *L = head, *s;
-    FILE *file;
+    StuNode *L = head, *s = NULL;
+    FILE *file = NULL;
     if (!(file = fopen(STU_FILE, "rb"))) {
         printf("\n学生信息读取失败\n");
         system(PAUSE);
@@ -34,7 +34,7 @@ int Stu_data_r() {
 //读取用户数据
 int User_data_r() {
     int n = 0;
-    FILE *file;
+    FILE *file = NULL;
     if (!(file = fopen(USER_FILE, "rb"))) {
         printf("\n用户信息读取失败\n");
         system(PAUSE);
@@ -52,7 +52,7 @@ int User_data_r() {
 //保存学生数据
 int Stu_data_a() {
     StuNode *L = head->next;
-    FILE *file;
+    FILE *file = NULL;
     if (!(file = fopen(STU_FILE, "ab"))) {
         printf("\n学生信息读取失败\n");
         system(PAUSE);
@@ -68,13 +68,13 @@ int Stu_data_a() {
 
 int Stu_data_w() {
     StuNode *L = head->next;
-    FILE *file;
+    FILE *file = NULL;
     if (!(file = fopen(STU_FILE, "wb"))) {
         printf("\n学生信息读取失败\n");
         system(PAUSE);
         return 0;
     }
-    while(L) {
+    while(L->next) {
         fwrite(&L->data, sizeof(Student), 1, file);
         L = L->next;
     }
@@ -85,7 +85,7 @@ int Stu_data_w() {
 //保存用户数据
 int User_data_w() {
     int n;
-    FILE *file;
+    FILE *file = NULL;
     if ((file = fopen(USER_FILE, "wb")) == NULL) {
         printf("\n用户信息读取失败\n");
         system(PAUSE);

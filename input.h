@@ -10,8 +10,8 @@
 
 int Input() {
     int n, i;
-    long int num;
-    StuNode *s, *L = head;
+    long int num = 0;
+    StuNode *s = NULL, *L = head;
     for (n = 0; n < STU_SIZE; n++) {
         s = (StuNode *) malloc(sizeof(StuNode));
         if (!s) {
@@ -31,6 +31,7 @@ int Input() {
         s->data.aver = s->data.sum / 3;
         L->next = s;
         s->pre = L;
+        s->next = NULL;
         L = L->next;
         size_2++;
     }

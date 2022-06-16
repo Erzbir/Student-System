@@ -49,8 +49,8 @@
 int main() {
     head = (StuNode *) malloc(sizeof(StuNode));
     int select = 1, select_2 = 1;
-    long int num;
-    int value;
+    long int num = 0;
+    int value = 0;
     if (!(FileInit())) {
         printf("\n初始化错误\n");
         system(PAUSE);
