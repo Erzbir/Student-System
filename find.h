@@ -10,6 +10,9 @@
 StuNode *Scan(long int item) {
     char select = 0;
     StuNode *L = head->next, *P = head->pre;
+    if (!L) {
+        return 0;
+    }
     while (L->next) {
         if (L->data.num == item) {
             while (1) {
