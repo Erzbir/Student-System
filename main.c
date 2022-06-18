@@ -23,10 +23,10 @@
  * The DoubleLinkList is not circular, the next of the last node points to the NULL and does not point to the first node, except that it is the same as the DoubleCircularLinkList,
  */
 
-//Please modify the file path declared in "define.h" before running. The file name can be customized and can be located in different folders, but must be different files.
+//Please modify the file path which was declared in "define.h" before running. The file name can be customized and can be located in different folders, but must be different files.
 //Please change the PAUSE declared in "define.h" to the command under Windows before running the Windows system
 
-//Need to add all files to the working directory, preferably CLion
+//Need to add all files to the working directory, preferably CLion, if you use C-free or Dev-C++ or VS, opening "main.c" directly and running it.
 
 //You cannot operate "modify" and "delete" without permission. If you want to operate, you must obtain permission first.
 // The management password is: 123456
@@ -50,7 +50,7 @@
 #include "checkAdmin.h" // check whether user is an admin
 #include "file_init.h"  // program.init
 #include "find.h"       // search student data
-#include "max.h"
+#include "max.h"        // display the No.1
 
 int main() {
     head = (StuNode *) malloc(sizeof(StuNode));
