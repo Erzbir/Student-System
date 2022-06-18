@@ -5,7 +5,6 @@
 #ifndef SYS_2_GETADMIN_H
 #define SYS_2_GETADMIN_H
 
-#include "define.h"
 #include "serialization.h"
 #include <string.h>
 

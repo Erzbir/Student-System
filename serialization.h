@@ -7,7 +7,7 @@
 
 #include "define.h"
 
-//读取学生数据
+//read student data
 int Stu_data_r() {
     StuNode *L = head, *s = NULL;
     FILE *file = NULL;
@@ -31,7 +31,7 @@ int Stu_data_r() {
     return 1;
 }
 
-//读取用户数据
+//read user data
 int User_data_r() {
     int n = 0;
     FILE *file = NULL;
@@ -49,7 +49,7 @@ int User_data_r() {
     return 1;
 }
 
-//保存学生数据
+//save student data
 int Stu_data_a() {
     StuNode *L = head->next;
     FILE *file = NULL;
@@ -66,6 +66,7 @@ int Stu_data_a() {
     return 1;
 }
 
+//save student data
 int Stu_data_w() {
     StuNode *L = head->next;
     FILE *file = NULL;
@@ -82,7 +83,7 @@ int Stu_data_w() {
     return 1;
 }
 
-//保存用户数据
+//save user data
 int User_data_w() {
     int n;
     FILE *file = NULL;

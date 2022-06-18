@@ -14,6 +14,7 @@ StuNode *Scan(long int item) {
         return 0;
     }
     while (L->next) {
+        // head to rear
         if (L->data.num == item) {
             while (1) {
                 printf("Already found student, do you want to display?(y/n):");
@@ -33,6 +34,7 @@ StuNode *Scan(long int item) {
                 }
             }
         }
+        // rear to head
         if (P->data.num == item) {
             while (1) {
                 printf("Already found student, do you want to display?(y/n):");

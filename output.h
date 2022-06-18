@@ -15,7 +15,7 @@ int Print() {
     int n, num_1 = size_2, num_2 = 1, i;
     printf("Enter the number to display:");
     scanf("%d", &num_2);
-    i = (num_2 >= num_1) ? num_1 - 1 : num_2;
+    i = (num_2 >= num_1) ? num_1 - 1 : num_2; // judge how much student will be displayed
     if (i > 0) {
         printf("\n");
         for (n = 0; n < i; n++) {

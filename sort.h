@@ -15,12 +15,15 @@ int Sort() {
     if (L == NULL) {
         return -1;
     }
+
+    // cover LinkList to Array
     while (L->next) {
         Stu[n] = L->data;
         L = L->next;
         n++;
         size_3++;
     }
+
     printf("1.sumScore.sort\n2.averScore.sort\n3.ID.sort\nEnter your choice:");
     scanf("%d", &select);
     if (select == 1) {
@@ -57,10 +60,13 @@ int Sort() {
         printf("\nPlease re-enter\n");
         system(PAUSE);
     }
+
+    // cover Array to LinkList
     for (n = 0; P; n++) {
         P->data = Stu[n];
         P = P->next;
     }
+
     if (!(Stu_data_w())) {
         return 0;
     }

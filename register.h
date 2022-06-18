@@ -6,7 +6,6 @@
 #define SYS_2_REGISTER_H
 
 #include <string.h>
-#include "define.h"
 #include "serialization.h"
 
 

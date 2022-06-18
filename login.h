@@ -7,7 +7,6 @@
 
 #include <string.h>
 #include "define.h"
-#include <stdio.h>
 
 int Login() {
     int n;

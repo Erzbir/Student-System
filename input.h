@@ -5,7 +5,6 @@
 #ifndef SYS_2_INPUT_H
 #define SYS_2_INPUT_H
 
-#include "define.h"
 #include "serialization.h"
 
 int Input() {
@@ -13,19 +12,21 @@ int Input() {
     long int num = 0;
     StuNode *s = NULL, *L = head;
     for (n = 0; n < STU_SIZE; n++) {
-        int flag = 1;
+        int flag = 1; // a qualification
         s = (StuNode *) malloc(sizeof(StuNode));
         if (!s) {
             return 0;
         }
         printf("Enter No.%d student info(ID,Name)(-1 to exit):", n + 1);
         scanf("%ld, %s", &num, s->data.name);
+        //this is a qualification to judge exit or continue
         if (num < 0) {
             free(s);
             s = NULL;
             break;
         }
-        StuNode *temp = head;
+        StuNode *temp = head; // when begin verify, temp points to head
+        //to make sure ID is unique
         if (temp) {
             while (temp) {
                 if (num == temp->data.num) {
@@ -54,8 +55,8 @@ int Input() {
         L = s;
         size_2++;
     }
-    L->next = NULL;
-    head->pre = L;
+    L->next = NULL; // this is useless you can delete that is I want you to understand these code
+    head->pre = L; // the head points to the rear
     if (!(Stu_data_a())) {
         return 0;
     }
