@@ -30,6 +30,7 @@ int Menu_main_2() {
     printf("6.Revise student info\n");
     printf("7.Delete student info\n");
     printf("8.Count number of students\n");
+    printf("9.Display the student with the highest overall score\n");
     printf("*****************************\n");
     printf("Enter your choice:");
     return 2;
