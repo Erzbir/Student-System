@@ -1,4 +1,4 @@
-# student-system
+# Student-system
 
 This is debug version, use DoubleLinkList but not circular. 
 
