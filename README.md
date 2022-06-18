@@ -14,7 +14,7 @@ This is debug version, use DoubleLinkList but not circular.
 
 /*
  * This version is implemented as an array and a DoubleLinkList. There is less user data, so it is directly stored in an array.
- * The student data uses a DoubleLinkList, does not check the uniqueness of the student number and uses the simplest bubble sort (no time),
+ * The student data uses a DoubleLinkList and uses the simplest bubble sort.
  * The DoubleLinkList is not circular, the next of the last node points to the NULL and does not point to the first node, 
  * except that it is the same as the DoubleCircularLinkList.
 
