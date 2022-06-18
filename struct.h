@@ -8,7 +8,7 @@
 
 typedef struct Student {
     long int num;
-    char name[20];
+    char name[30];
     float score[3];
     float aver;
     float sum;
