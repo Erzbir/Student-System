@@ -9,6 +9,9 @@
 
 int Print() {
     StuNode *L = head->next;
+    if (!L) {
+        return 0;
+    }
     int n, num_1 = size_2, num_2 = 1, i;
     printf("Enter the number to display:");
     scanf("%d", &num_2);
