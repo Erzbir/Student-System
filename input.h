@@ -13,16 +13,33 @@ int Input() {
     long int num = 0;
     StuNode *s = NULL, *L = head;
     for (n = 0; n < STU_SIZE; n++) {
+        int flag = 1;
         s = (StuNode *) malloc(sizeof(StuNode));
         if (!s) {
             return 0;
         }
-        printf("Enter No.%d student info(ID,Name)(-1 to exited):", n + 1);
+        printf("Enter No.%d student info(ID,Name)(-1 to exit):", n + 1);
         scanf("%ld, %s", &num, s->data.name);
         if (num < 0) {
             free(s);
             s = NULL;
             break;
+        }
+        StuNode *temp = head;
+        if (temp) {
+            while (temp) {
+                if (num == temp->data.num) {
+                    printf("Student has existed\n");
+                    flag = 0;
+                }
+                temp = temp->next;
+            }
+        }
+        if (!flag) {
+            free(s);
+            s = NULL;
+            n--;
+            continue;
         }
         s->data.num = num;
         for (i = 0; i < 3; i++) {
