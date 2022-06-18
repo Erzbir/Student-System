@@ -19,7 +19,7 @@
 /*
  * This version is implemented as an array and a DoubleLinkList.
  * There is less user data, so it is directly stored in an array.
- * The student data uses a DoubleLinkList uses the simplest bubble sort,
+ * The student data uses a DoubleLinkList uses the simplest bubble sort.
  * The DoubleLinkList is not circular, the next of the last node points to the NULL and does not point to the first node, except that it is the same as the DoubleCircularLinkList,
  */
 
@@ -156,7 +156,7 @@ int main() {
                         system(PAUSE);
                         break;
                     case 9:
-                        if(!Max()){
+                        if (!Max()) {
                             printf("Error");
                         }
                         system(PAUSE);
