@@ -6,6 +6,8 @@
 
 // This is debug version, use DoubleLinkList but not circular.
 
+// Why I use English? Because use Chinese may cause garbled characters, the reason is different encoding.
+
 //Write Environment:
 /*
  * System Environment: macOS
@@ -17,7 +19,7 @@
 /*
  * This version is implemented as an array and a DoubleLinkList.
  * There is less user data, so it is directly stored in an array.
- * The student data uses a DoubleLinkList, does not check the uniqueness of the student number and uses the simplest bubble sort (no time),
+ * The student data uses a DoubleLinkList uses the simplest bubble sort,
  * The DoubleLinkList is not circular, the next of the last node points to the NULL and does not point to the first node, except that it is the same as the DoubleCircularLinkList,
  */
 
@@ -48,6 +50,7 @@
 #include "checkAdmin.h" // check whether user is an admin
 #include "file_init.h"  // program.init
 #include "find.h"       // search student data
+#include "max.h"
 
 int main() {
     head = (StuNode *) malloc(sizeof(StuNode));
@@ -150,6 +153,12 @@ int main() {
                         break;
                     case 8:
                         printf("\nThe total number of student:%d\n", size_2);
+                        system(PAUSE);
+                        break;
+                    case 9:
+                        if(!Max()){
+                            printf("Error");
+                        }
                         system(PAUSE);
                         break;
                     default:
