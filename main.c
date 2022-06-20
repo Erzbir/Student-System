@@ -6,7 +6,7 @@
 
 // This is debug version, use DoubleLinkList but not circular.
 
-// Why I use English? Because use Chinese may cause garbled characters, the reason is different encoding.
+// Why I use English? Because use Chinese may cause garbled characters in different encodings.
 
 //Write Environment:
 /*
