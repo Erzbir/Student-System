@@ -24,6 +24,7 @@ int Delete() {
             return 0;
         } else if (select == 'y' || select == 'Y') {
             L->pre->next = L->next;
+            L->next->pre = L->pre;
             L->pre = NULL;
             free(L);
             size_2--;
