@@ -10,7 +10,7 @@
 // Running in Debug!!!
 // Running in Debug!!!
 
-// Why I use English? Because use Chinese may cause garbled characters in different encodings.
+// Why I use English? Because using Chinese may cause garbled characters in different encodings.
 
 //Writing Environment:
 /*

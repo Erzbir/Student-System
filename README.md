@@ -1,8 +1,8 @@
 # Student-system
 
-This is debug version, use DoubleLinkList but not circular.
+This is debug version, using DoubleLinkList but not circular.
 
-// Write Environment:
+// Writing Environment:
 
 /*
 
