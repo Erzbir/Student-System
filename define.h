@@ -11,24 +11,24 @@
 
 #ifndef USER_FILE
 #define USER_FILE "./user.txt"  // user data path
-#endif
+#endif //USER_FILE
 
 #ifndef STU_FILE
 #define STU_FILE "./stu.txt"    // student data path
-#endif
+#endif //STU_FILE
 
 #ifndef USER_SIZE
 #define USER_SIZE 20    // user data limit
-#endif
+#endif //USER_SIZE
 
 #ifndef STU_SIZE
 #define STU_SIZE 10000  // student data limit when input
-#endif
+#endif //STU_SIZE
 
 #ifndef PAUSE
 #define PAUSE "read"    // pause of macOS
 //#define PAUSE "pause"   // pause of Windows
-#endif
+#endif //PAUSE
 
 StuNode *head = NULL;          // head node
 Users User[USER_SIZE];  // user data
