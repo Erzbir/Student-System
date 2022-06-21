@@ -12,7 +12,7 @@
 
 // Why I use English? Because use Chinese may cause garbled characters in different encodings.
 
-//Write Environment:
+//Writing Environment:
 /*
  * System Environment: macOS
  * Hardware Environment: MacbookPro (M1 chip)
