@@ -55,6 +55,9 @@
 
 int main() {
     head = (StuNode *) malloc(sizeof(StuNode));
+    if(!head){
+        return 0;
+    }
     int select = 1, select_2 = 1;
     long int num = 0;
     int value = 0;

@@ -29,7 +29,7 @@ int FileInit() {
         size_2++; // this "while" is just count how much student data in file
     }
     fclose(file);
-    free(L); // release useless point
+    free(L); // release useless node
     if (!(Stu_data_r())) {
         return 0;
     }
