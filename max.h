@@ -8,7 +8,7 @@
 #include "define.h"
 
 StuNode *Max() {
-    StuNode *L = head->next, *P = head->pre, *s;
+    StuNode *L = head->next, *P = head->pre, *s = NULL;
     if (!L) {
         return NULL;
     }

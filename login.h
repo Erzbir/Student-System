@@ -8,14 +8,14 @@
 #include <string.h>
 #include "define.h"
 
-int Login() {
-    int n;
+short int Login() {
+    short int n = 0;
     char account[16], password[16];
     printf("Enter username:");
     scanf("%s", account);
     printf("Enter password:");
     scanf("%s", password);
-    for (n = 0; n < USER_SIZE; n++) {
+    for (; n < USER_SIZE; n++) {
         if (strcmp(User[n].account, account) == 0 && strcmp(User[n].password, password) == 0) {
             printf("\nLogin Successfully\n");
             system(PAUSE);

@@ -8,7 +8,7 @@
 #include "serialization.h"
 
 int Input() {
-    int n, i;
+    short int n = 0, i = 0;
     long int num = 0;
     StuNode *s = NULL, *L = head;
     for (n = 0; n < STU_SIZE; n++) {

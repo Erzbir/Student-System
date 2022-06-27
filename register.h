@@ -10,11 +10,11 @@
 
 
 int Register() {
-    int n;
+    int n = 0;
     char account[16], password[16], password_sure[16];
     printf("Enter username:");
     scanf("%s", account);
-    for (n = 0; n < USER_SIZE - 1; n++) {
+    for (; n < USER_SIZE - 1; n++) {
         if (strcmp(User[n].account, account) == 0) {
             printf("\nUser has existed\n");
             system(PAUSE);

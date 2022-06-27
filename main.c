@@ -62,9 +62,9 @@ int main() {
     if(!head){
         return 0;
     }
-    int select = 1, select_2 = 1;
+    short int select = 1, select_2 = 1;
     long int num = 0;
-    int value = 0;
+    short int value = 0;
     if (!(FileInit())) {
         printf("\nFailed to Initialize\n");
         system(PAUSE);
@@ -72,7 +72,7 @@ int main() {
     }
     while (select) {
         Menu_main_1();
-        scanf("%d", &select);
+        scanf("%hd", &select);
         switch (select) {
             case 0:
                 printf("exited");
@@ -99,7 +99,7 @@ int main() {
         if (select == 2 && value) {
             while (select_2) {
                 Menu_main_2();
-                scanf("%d", &select_2);
+                scanf("%hd", &select_2);
                 switch (select_2) {
                     case 0:
                         printf("\nexited\n");
