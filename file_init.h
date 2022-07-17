@@ -30,13 +30,7 @@ int FileInit() {
     }
     fclose(file);
     free(L); // release useless node
-    if (!(Stu_data_r())) {
-        return 0;
-    }
-    if (!(User_data_r())) {
-        return 0;
-    }
-    return 1;
+    return Stu_data_r() && User_data_r();
 }
 
 #endif //SYS_2_FILE_INIT_H

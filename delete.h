@@ -20,9 +20,7 @@ int Delete() {
         }
         printf("Sure to delete?(y/n):");
         scanf("%s", &select);
-        if (select == 'n' || select == 'N') {
-            return 0;
-        } else if (select == 'y' || select == 'Y') {
+        if (select == 'y' || select == 'Y') {
             L->pre->next = L->next;
             L->next->pre = L->pre;
             L->pre = NULL;
@@ -31,20 +29,14 @@ int Delete() {
             printf("\nDeleted Successfully\n");
             system(PAUSE);
         } else {
-            printf("\nPlease re-enter\n");
-            system(PAUSE);
-            break;
+            return 0;
         }
         printf("Whether to continue?(y/n):");
         scanf("%s", &select);
         if (select == 'N' || select == 'n') {
-            if (!(Stu_data_w())) {
-                return 0;
-            }
-            return 1;
+            return Stu_data_w();
         }
     }
-    return 0;
 }
 
 #endif //SYS_2_DELETE_H

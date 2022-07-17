@@ -8,10 +8,7 @@
 #include "define.h"
 
 int Check(int index) {
-    if (User[index].type == 0) {
-        return 1;
-    }
-    return -1;
+    return User[index].type == 1;
 }
 
 #endif //SYS_2_CHECKADMIN_H
